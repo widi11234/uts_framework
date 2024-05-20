@@ -1,0 +1,516 @@
+{
+	"info": {
+		"_postman_id": "371045cc-b6fd-4a4a-9147-54c56fd389d8",
+		"name": "UTS_WIDI_IF22G",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34118641"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@mail.com\",\r\n    \"password\": \"admin\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://widi.webframework.my.id/api/login",
+					"protocol": "http",
+					"host": [
+						"widi",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"WIDI FAJAR SATRITAMA\",\r\n    \"email\": \"widifajarsatritama@gmail.com\",\r\n    \"password\": \"password\",\r\n    \"password_confirmation\": \"password\"\r\n}\r\nS",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://widi.webframework.my.id/api/register",
+					"protocol": "http",
+					"host": [
+						"widi",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add categoires",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzE2MDQzNTAxLCJleHAiOjE3MTYwNDcxMDEsIm5iZiI6MTcxNjA0MzUwMSwianRpIjoiTGZyRG9IblhON3FXd01BayIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.3rtRqYCtSoA2EjRGcsKo3oioMGaQLEGV6UednNirecg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"kaos kaki\"  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://widi.webframework.my.id/api/categories",
+					"protocol": "http",
+					"host": [
+						"widi",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add produk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzE1ODQ3MDIzLCJleHAiOjE3MTU4NTA2MjMsIm5iZiI6MTcxNTg0NzAyMywianRpIjoiWk5UUHl4bTJ5czNaSUlZayIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.hKLBmWOe-Xqnr7SyT4IbAz4hVJXmO3V7FfQjUjNRBDo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"celana jeans\",\r\n    \"description\": \"Deskripsi produak baru\",\r\n    \"price\": 100000, // Harga produk dalam satuan mata uang (misalnya Rupiah) // URL gambar produk (opsional)\r\n    \"expired_at\": \"2024-12-31\", // Tanggal kadaluarsa produk (opsional)\r\n    \"category_id\": 6\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://widi.webframework.my.id/api/products",
+					"protocol": "http",
+					"host": [
+						"widi",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit category by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzE1ODQ3MDIzLCJleHAiOjE3MTU4NTA2MjMsIm5iZiI6MTcxNTg0NzAyMywianRpIjoiWk5UUHl4bTJ5czNaSUlZayIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.hKLBmWOe-Xqnr7SyT4IbAz4hVJXmO3V7FfQjUjNRBDo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Baju baru\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://widi.webframework.my.id/api/categories/6",
+					"protocol": "http",
+					"host": [
+						"widi",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"categories",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit produk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzE1ODQ3MDIzLCJleHAiOjE3MTU4NTA2MjMsIm5iZiI6MTcxNTg0NzAyMywianRpIjoiWk5UUHl4bTJ5czNaSUlZayIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.hKLBmWOe-Xqnr7SyT4IbAz4hVJXmO3V7FfQjUjNRBDo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Example Product\",\r\n    \"description\": \"This is an example product\",\r\n    \"price\": 100.0,\r\n    \"category_id\": 6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://widi.webframework.my.id/api/products/1",
+					"protocol": "http",
+					"host": [
+						"widi",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read category all",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzE1ODQ3MDIzLCJleHAiOjE3MTU4NTA2MjMsIm5iZiI6MTcxNTg0NzAyMywianRpIjoiWk5UUHl4bTJ5czNaSUlZayIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.hKLBmWOe-Xqnr7SyT4IbAz4hVJXmO3V7FfQjUjNRBDo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://widi.webframework.my.id/api/categories",
+					"protocol": "http",
+					"host": [
+						"widi",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "google get token jwt",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"pm.test(\"Response status code is 500\", function () {",
+							"  pm.response.to.have.status(500);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"  pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Verify that the response has the required fields\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.error).to.exist;",
+							"    pm.expect(responseData.error.message).to.exist;",
+							"    pm.expect(responseData.error.type).to.exist;",
+							"    pm.expect(responseData.error.code).to.exist;",
+							"    pm.expect(responseData.error.trace_id).to.exist;",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.google.com/o/oauth2/v2/auth",
+							"type": "string"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://oauth2.googleapis.com/token",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "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",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "628020214990-djaucqh5sa5oisq721bnevsn9kcqj3jr.apps.googleusercontent.com",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://widi.webframework.my.id/login/google/callback",
+					"protocol": "http",
+					"host": [
+						"widi",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"login",
+						"google",
+						"callback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read cateogry by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzE1ODQ3MDIzLCJleHAiOjE3MTU4NTA2MjMsIm5iZiI6MTcxNTg0NzAyMywianRpIjoiWk5UUHl4bTJ5czNaSUlZayIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.hKLBmWOe-Xqnr7SyT4IbAz4hVJXmO3V7FfQjUjNRBDo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://widi.webframework.my.id/api/categories/6",
+					"protocol": "http",
+					"host": [
+						"widi",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"categories",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read produk by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzE1ODQ3MDIzLCJleHAiOjE3MTU4NTA2MjMsIm5iZiI6MTcxNTg0NzAyMywianRpIjoiWk5UUHl4bTJ5czNaSUlZayIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.hKLBmWOe-Xqnr7SyT4IbAz4hVJXmO3V7FfQjUjNRBDo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nama Produk Baru\",\r\n    \"description\": \"Deskripsi produak baru\",\r\n    \"price\": 100000, // Harga produk dalam satuan mata uang (misalnya Rupiah) // URL gambar produk (opsional)\r\n    \"expired_at\": \"2024-12-31\", // Tanggal kadaluarsa produk (opsional)\r\n    \"category_id\": 5\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://widi.webframework.my.id/api/products/2",
+					"protocol": "http",
+					"host": [
+						"widi",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delet category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzE1NzUzOTA3LCJleHAiOjE3MTU3NTc1MDcsIm5iZiI6MTcxNTc1MzkwNywianRpIjoiTUZGVEJ1RUEzVDFyUFRUciIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.euJtVv_uECbM1LkGkbUxr_4L3HsuOvXQKgDJCuqi6Kc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://widi.webframework.my.id/api/categories/5",
+					"protocol": "http",
+					"host": [
+						"widi",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"categories",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delet produk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzE1NzU3NTk0LCJleHAiOjE3MTU3NjExOTQsIm5iZiI6MTcxNTc1NzU5NCwianRpIjoidHE5RGNVMWpuV1BvNG9YcCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.JJa10pfp7B8Knok5EUZyqHgp63Ilga9-js5RiQZ2omA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://widi.webframework.my.id/api/products/1",
+					"protocol": "http",
+					"host": [
+						"widi",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
